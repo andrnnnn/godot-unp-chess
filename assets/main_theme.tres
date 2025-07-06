@@ -1,0 +1,120 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://rkt0rb637w0g"]
+
+[ext_resource type="FontFile" uid="uid://dqubc8i3xvgdr" path="res://assets/fonts/Abaddon_Light.ttf" id="1_font"]
+
+[sub_resource type="StyleBoxFlat" id="Button_Disabled"]
+content_margin_left = 12.0
+content_margin_top = 6.0
+content_margin_right = 12.0
+content_margin_bottom = 6.0
+bg_color = Color(0.960784, 0.960784, 0.960784, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.862745, 0.862745, 0.862745, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="Button_Focus"]
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.2, 0.501961, 0.901961, 1)
+corner_radius_top_left = 11
+corner_radius_top_right = 11
+corner_radius_bottom_right = 11
+corner_radius_bottom_left = 11
+
+[sub_resource type="StyleBoxFlat" id="Button_Hover"]
+content_margin_left = 12.0
+content_margin_top = 6.0
+content_margin_right = 12.0
+content_margin_bottom = 6.0
+bg_color = Color(0.960784, 0.960784, 0.960784, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.701961, 0.701961, 0.701961, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0, 0, 0, 0.0784314)
+shadow_size = 4
+shadow_offset = Vector2(0, 2)
+
+[sub_resource type="StyleBoxFlat" id="Button_Normal"]
+content_margin_left = 12.0
+content_margin_top = 6.0
+content_margin_right = 12.0
+content_margin_bottom = 6.0
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0, 0, 0, 0.0784314)
+shadow_size = 4
+shadow_offset = Vector2(0, 2)
+
+[sub_resource type="StyleBoxFlat" id="Button_Pressed"]
+content_margin_left = 12.0
+content_margin_top = 6.0
+content_margin_right = 12.0
+content_margin_bottom = 6.0
+bg_color = Color(0.921569, 0.921569, 0.921569, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.6, 0.6, 0.6, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="Window_Panel"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.862745, 0.862745, 0.862745, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(0, 0, 0, 0.14902)
+shadow_size = 8
+
+[resource]
+default_font = ExtResource("1_font")
+default_font_size = 24
+Button/colors/font_color = Color(0.2, 0.2, 0.2, 1)
+Button/colors/font_disabled_color = Color(0.6, 0.6, 0.6, 1)
+Button/colors/font_focus_color = Color(0.2, 0.2, 0.2, 1)
+Button/colors/font_hover_color = Color(0.2, 0.2, 0.2, 1)
+Button/colors/font_pressed_color = Color(0.2, 0.2, 0.2, 1)
+Button/constants/h_separation = 4
+Button/font_sizes/font_size = 32
+Button/fonts/font = ExtResource("1_font")
+Button/styles/disabled = SubResource("Button_Disabled")
+Button/styles/focus = SubResource("Button_Focus")
+Button/styles/hover = SubResource("Button_Hover")
+Button/styles/normal = SubResource("Button_Normal")
+Button/styles/pressed = SubResource("Button_Pressed")
+Window/colors/title_color = Color(0.2, 0.2, 0.2, 1)
+Window/constants/title_height = 50
+Window/font_sizes/title_font_size = 36
+Window/fonts/title_font = ExtResource("1_font")
+Window/styles/panel = SubResource("Window_Panel")

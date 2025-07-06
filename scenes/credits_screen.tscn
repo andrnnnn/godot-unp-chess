@@ -1,0 +1,411 @@
+[gd_scene load_steps=10 format=3 uid="uid://b0dosyl2ki2nb"]
+
+[ext_resource type="FontFile" uid="uid://binnamcsbaeja" path="res://assets/fonts/Abaddon_Bold.ttf" id="1_vkwks"]
+[ext_resource type="Script" path="res://scripts/credits_screen.gd" id="2_e7k2y"]
+[ext_resource type="Texture2D" uid="uid://bu4kaxa4wx5df" path="res://assets/Yoga Firnanda Wicaksono.png" id="3_2oomi"]
+[ext_resource type="FontFile" uid="uid://dqubc8i3xvgdr" path="res://assets/fonts/Abaddon_Light.ttf" id="3_70c2j"]
+[ext_resource type="Texture2D" uid="uid://dpw5op4q54ecj" path="res://assets/Muchammad Rafli Alfiasyah.png" id="4_407a7"]
+[ext_resource type="Texture2D" uid="uid://b8y12fidpu8i6" path="res://assets/Delia Saniar Komalasari.png" id="4_ig61r"]
+[ext_resource type="Texture2D" uid="uid://btcivj084wals" path="res://assets/Ichsan Azala Walanadza.png" id="6_gxijg"]
+[ext_resource type="Texture2D" uid="uid://be6mnkkcbp8mr" path="res://assets/Muhammad Andrian Bhakti Maulana.png" id="6_o8ptc"]
+[ext_resource type="AudioStream" uid="uid://4hpqlbpoy3y" path="res://assets/menu_music.mp3" id="9_yfq2f"]
+
+[node name="CreditsScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_e7k2y")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.117647, 0.117647, 0.117647, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_vkwks")
+theme_override_font_sizes/font_size = 80
+text = "Credits"
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CreditsList" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 20
+
+[node name="SeparatorTim" type="HSeparator" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="TitleTim" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_vkwks")
+theme_override_font_sizes/font_size = 36
+text = "~ TIM PENGEMBANG ~"
+horizontal_alignment = 1
+
+[node name="Spacer1" type="Control" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="TeamGrid" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 40
+
+[node name="Member1" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList/TeamGrid"]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Photo1" type="TextureRect" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList/TeamGrid/Member1"]
+custom_minimum_size = Vector2(240, 240)
+layout_mode = 2
+texture = ExtResource("3_2oomi")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Info1" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList/TeamGrid/Member1"]
+layout_mode = 2
+alignment = 1
+
+[node name="Role1" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList/TeamGrid/Member1/Info1"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_vkwks")
+theme_override_font_sizes/font_size = 28
+text = "DESAINER GAME & PIMPINAN PROYEK"
+
+[node name="Name1" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList/TeamGrid/Member1/Info1"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_70c2j")
+theme_override_font_sizes/font_size = 24
+text = "Yoga Firnanda Wicaksono"
+
+[node name="Member2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList/TeamGrid"]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Photo2" type="TextureRect" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList/TeamGrid/Member2"]
+custom_minimum_size = Vector2(240, 240)
+layout_mode = 2
+texture = ExtResource("4_407a7")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Info2" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList/TeamGrid/Member2"]
+layout_mode = 2
+alignment = 1
+
+[node name="Role2" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList/TeamGrid/Member2/Info2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_vkwks")
+theme_override_font_sizes/font_size = 28
+text = "DESAINER GRAFIS (ARTIST)"
+
+[node name="Name2" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList/TeamGrid/Member2/Info2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_70c2j")
+theme_override_font_sizes/font_size = 24
+text = "Muchammad Rafli Alfiansyah"
+
+[node name="Member3" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList/TeamGrid"]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Photo3" type="TextureRect" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList/TeamGrid/Member3"]
+custom_minimum_size = Vector2(240, 240)
+layout_mode = 2
+texture = ExtResource("6_gxijg")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Info3" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList/TeamGrid/Member3"]
+layout_mode = 2
+alignment = 1
+
+[node name="Role3" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList/TeamGrid/Member3/Info3"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_vkwks")
+theme_override_font_sizes/font_size = 28
+text = "PEMROGRAM (PROGRAMMER)"
+
+[node name="Name3" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList/TeamGrid/Member3/Info3"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_70c2j")
+theme_override_font_sizes/font_size = 24
+text = "Ichsan Azala Walanadza"
+
+[node name="Member4" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList/TeamGrid"]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Photo4" type="TextureRect" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList/TeamGrid/Member4"]
+custom_minimum_size = Vector2(240, 240)
+layout_mode = 2
+texture = ExtResource("6_o8ptc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Info4" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList/TeamGrid/Member4"]
+layout_mode = 2
+alignment = 1
+
+[node name="Role4" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList/TeamGrid/Member4/Info4"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_vkwks")
+theme_override_font_sizes/font_size = 28
+text = "SENIMAN TEKNIS (PROGRAMMER + ARTIST)"
+
+[node name="Name4" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList/TeamGrid/Member4/Info4"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_70c2j")
+theme_override_font_sizes/font_size = 24
+text = "Muhammad Andrian Bhakti Maulana"
+
+[node name="Member5" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList/TeamGrid"]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Photo5" type="TextureRect" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList/TeamGrid/Member5"]
+custom_minimum_size = Vector2(240, 240)
+layout_mode = 2
+texture = ExtResource("4_ig61r")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Info5" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList/TeamGrid/Member5"]
+layout_mode = 2
+alignment = 1
+
+[node name="Role5" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList/TeamGrid/Member5/Info5"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_vkwks")
+theme_override_font_sizes/font_size = 28
+text = "KOMPOSER MUSIK (COMPOSER)"
+
+[node name="Name5" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList/TeamGrid/Member5/Info5"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_70c2j")
+theme_override_font_sizes/font_size = 24
+text = "Delia Saniar Komalasari"
+
+[node name="SeparatorAset" type="HSeparator" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="TitleAset" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_vkwks")
+theme_override_font_sizes/font_size = 36
+text = "~ ASET & SUMBER DAYA ~"
+horizontal_alignment = 1
+
+[node name="Spacer6" type="Control" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="Aset1" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_70c2j")
+theme_override_font_sizes/font_size = 24
+text = "Logo UNP An Inspiring University dan Logo Prodi Teknik Informatika"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="SubTitleFont" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_vkwks")
+theme_override_font_sizes/font_size = 28
+text = "
+
+Font"
+horizontal_alignment = 1
+
+[node name="Font1" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_70c2j")
+theme_override_font_sizes/font_size = 24
+text = "Abaddon oleh Nathan Scott
+IBM Plex Sans oleh Mike Abbink, Paul van der Laan, Pieter van Rosmalen"
+horizontal_alignment = 1
+
+[node name="SubTitleSFX" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_vkwks")
+theme_override_font_sizes/font_size = 28
+text = "
+Efek Suara"
+horizontal_alignment = 1
+
+[node name="SFX1" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_70c2j")
+theme_override_font_sizes/font_size = 24
+text = "\"Checkmate Sound Effect\" oleh RogerRingtone (zedge.net)
+\"Chess sound\" oleh Fortuthg (zedge.net)
+\"Chess.com sound effects\" oleh Flabberghasted (YouTube)"
+horizontal_alignment = 1
+
+[node name="SubTitleMusic" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_vkwks")
+theme_override_font_sizes/font_size = 28
+text = "
+Musik"
+horizontal_alignment = 1
+
+[node name="Music1" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_70c2j")
+theme_override_font_sizes/font_size = 24
+text = "\"Chess! OST: Main Menu\" oleh 9064 MUSIC (YouTube)"
+horizontal_alignment = 1
+
+[node name="SeparatorAI" type="HSeparator" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="TitleAI" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_vkwks")
+theme_override_font_sizes/font_size = 36
+text = "~ ASET DENGAN BANTUAN AI ~"
+horizontal_alignment = 1
+
+[node name="SpacerAI" type="Control" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="AIAsset1" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_vkwks")
+theme_override_font_sizes/font_size = 28
+text = "DESAIN BIDAK CATUR"
+horizontal_alignment = 1
+
+[node name="AIAssetDesc1" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_70c2j")
+theme_override_font_sizes/font_size = 24
+text = "Konsep awal di-generate menggunakan model AI Generatif (ChatGPT/DALL-E).
+Finalisasi dan penyempurnaan desain oleh: Muchammad Rafli Alfiansyah"
+horizontal_alignment = 1
+
+[node name="SeparatorTeknologi" type="HSeparator" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="TitleTeknologi" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_vkwks")
+theme_override_font_sizes/font_size = 36
+text = "~ TEKNOLOGI & PERANGKAT LUNAK ~"
+horizontal_alignment = 1
+
+[node name="Spacer7" type="Control" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="Teknologi1" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_70c2j")
+theme_override_font_sizes/font_size = 24
+text = "Dibuat dengan Game Engine
+Godot Engine v4.2
+(godotengine.org)"
+horizontal_alignment = 1
+
+[node name="Teknologi2" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_vkwks")
+theme_override_font_sizes/font_size = 28
+text = "
+Desain Aset Visual"
+horizontal_alignment = 1
+
+[node name="TeknologiDesc2" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_70c2j")
+theme_override_font_sizes/font_size = 24
+text = "Logo Kelompok, Logo Game, dan Aset Visual Lainnya dibuat menggunakan
+Figma"
+horizontal_alignment = 1
+
+[node name="SeparatorThanks" type="HSeparator" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="TitleThanks" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_vkwks")
+theme_override_font_sizes/font_size = 36
+text = "~ UCAPAN TERIMA KASIH ~"
+horizontal_alignment = 1
+
+[node name="Spacer8" type="Control" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="Thanks1" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_70c2j")
+theme_override_font_sizes/font_size = 24
+text = "Keluarga dan teman-teman
+yang telah memberikan dukungan."
+horizontal_alignment = 1
+
+[node name="Thanks2" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_70c2j")
+theme_override_font_sizes/font_size = 24
+text = "
+Dan untuk Anda, yang telah memainkan
+game ini."
+horizontal_alignment = 1
+
+[node name="SeparatorEnd" type="HSeparator" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("1_vkwks")
+theme_override_font_sizes/font_size = 32
+text = "Back"
+
+[node name="CreditsMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_yfq2f")

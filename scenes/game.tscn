@@ -1,0 +1,60 @@
+[gd_scene load_steps=10 format=3 uid="uid://c8jr0502ype8o"]
+
+[ext_resource type="Texture2D" uid="uid://bpeu3dqcoqvq0" path="res://assets/board.png" id="1_0208c"]
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_tclo3"]
+[ext_resource type="Script" path="res://scripts/board.gd" id="3_mjhun"]
+[ext_resource type="AudioStream" uid="uid://cr06o86y1u4ma" path="res://assets/move_piece.mp3" id="4_rtyo0"]
+[ext_resource type="AudioStream" uid="uid://ckd6gb5p8vr35" path="res://assets/checkmate.mp3" id="5_s1crc"]
+[ext_resource type="AudioStream" uid="uid://bqo0h4p4ut80l" path="res://assets/start_sound.mp3" id="6_86h3f"]
+[ext_resource type="FontFile" uid="uid://binnamcsbaeja" path="res://assets/fonts/Abaddon_Bold.ttf" id="6_ot55c"]
+[ext_resource type="PackedScene" uid="uid://dmogcj4nl7qlj" path="res://scenes/game_over_screen.tscn" id="7_4llqn"]
+[ext_resource type="PackedScene" uid="uid://drxujms5tlarp" path="res://scenes/pause_menu.tscn" id="8_71nvv"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_tclo3")
+
+[node name="Board" type="Sprite2D" parent="."]
+texture = ExtResource("1_0208c")
+centered = false
+script = ExtResource("3_mjhun")
+
+[node name="GameOver" type="AcceptDialog" parent="."]
+title = "Result"
+initial_position = 4
+size = Vector2i(108, 100)
+unresizable = true
+ok_button_text = "Play Again?"
+dialog_text = "Checkmate!"
+
+[node name="MoveSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_rtyo0")
+
+[node name="CheckmateSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_s1crc")
+
+[node name="StartSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_86h3f")
+
+[node name="CheckNotification" type="Label" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 130.0
+offset_top = 478.0
+offset_right = 930.0
+offset_bottom = 678.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.2, 0.2, 0.2, 1)
+theme_override_fonts/font = ExtResource("6_ot55c")
+theme_override_font_sizes/font_size = 128
+text = "Check!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameOverScreen" parent="." instance=ExtResource("7_4llqn")]
+
+[node name="PauseMenu" parent="." instance=ExtResource("8_71nvv")]
