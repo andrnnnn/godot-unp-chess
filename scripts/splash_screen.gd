@@ -1,9 +1,5 @@
 extends Control
 
-#-----------------------------------------------------------------------------
-# PENGATURAN YANG BISA DIUBAH DARI INSPECTOR
-#-----------------------------------------------------------------------------
-
 ## Durasi transisi fade-in dan fade-out (dalam detik).
 @export var transition_duration: float = 0.75
 
@@ -15,10 +11,6 @@ extends Control
 ## Path ke scene menu utama Anda.
 @export var main_menu_scene: String = "res://scenes/main_menu.tscn"
 
-#-----------------------------------------------------------------------------
-# REFERENSI NODE
-#-----------------------------------------------------------------------------
-
 @onready var logo_unp: Control = $Screen1_Logos/LogoUNP
 @onready var logo_fakultas: Control = $Screen1_Logos/LogoFakultas
 @onready var logo_prodi: Control = $Screen1_Logos/LogoProdi
@@ -26,10 +18,6 @@ extends Control
 @onready var screen3_judul: Control = $Screen3_Judul
 
 var can_press_any_key: bool = false
-
-#-----------------------------------------------------------------------------
-# FUNGSI BAWAAN GODOT
-#-----------------------------------------------------------------------------
 
 func _ready() -> void:
 	set_window()
@@ -39,10 +27,6 @@ func _unhandled_input(event: InputEvent) -> void:
 	if can_press_any_key and event.is_pressed():
 		set_process_unhandled_input(false)
 		get_tree().change_scene_to_file(main_menu_scene)
-
-#-----------------------------------------------------------------------------
-# FUNGSI KUSTOM
-#-----------------------------------------------------------------------------
 
 func set_window() -> void:
 	var screen_size = DisplayServer.screen_get_size()
