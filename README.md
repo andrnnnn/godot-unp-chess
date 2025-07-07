@@ -18,7 +18,7 @@
 
 ---
 
-## Tangkapan Layar (Screenshots)
+## Screenshots
 
 | Tampilan Menu Utama                 | Tampilan Permainan                    |
 | :---------------------------------- | :------------------------------------ |
@@ -40,23 +40,6 @@
 
 -   🖱️ **Tombol Kiri Mouse:** Digunakan untuk semua aksi utama (menekan tombol, memilih bidak, dan menentukan petak tujuan).
 -   `Esc` **Tombol Escape:** Digunakan untuk menjeda permainan dan menampilkan **Pause Menu**.
-
----
-
-## Instalasi & Menjalankan Proyek
-
-### Untuk Pemain
-
-1.  Unduh versi rilis terbaru dari halaman **Releases** di repositori ini.
-2.  Ekstrak file `.zip` yang telah diunduh.
-3.  Jalankan file eksekusi (`UNP Chess.exe` untuk Windows).
-
-### Untuk Pengembang
-
-1.  Pastikan Anda memiliki **Godot Engine v4.2** atau yang lebih baru.
-2.  _Clone_ repositori ini: `git clone https://...`
-3.  Buka Godot Engine, klik **'Import'**, lalu cari dan pilih file `project.godot` dari folder yang telah Anda _clone_.
-4.  Proyek siap dijalankan dari dalam editor Godot.
 
 ---
 
