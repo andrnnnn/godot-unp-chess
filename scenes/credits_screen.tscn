@@ -275,7 +275,8 @@ theme_override_fonts/font = ExtResource("3_70c2j")
 theme_override_font_sizes/font_size = 24
 text = "\"Checkmate Sound Effect\" oleh RogerRingtone (zedge.net)
 \"Chess sound\" oleh Fortuthg (zedge.net)
-\"Chess.com sound effects\" oleh Flabberghasted (YouTube)"
+\"Chess.com sound effects\" oleh Flabberghasted (YouTube)
+\"Time out - Sound Effect\" oleh Eccentric Sounds (YouTube)"
 horizontal_alignment = 1
 
 [node name="SubTitleMusic" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/CreditsList"]
@@ -409,3 +410,4 @@ text = "Back"
 
 [node name="CreditsMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_yfq2f")
+autoplay = true

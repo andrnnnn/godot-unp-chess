@@ -1,7 +1,6 @@
-res://scenes/splash_screen.tscn
-res://assets/promote_menu.tres
-res://assets/main_theme.tres
-res://scripts/splash_screen.gd
-res://scenes/main_menu.tscn
-res://scenes/credits_screen.tscn
 res://scenes/game.tscn
+res://assets/promote_menu.tres
+res://scripts/game.gd
+res://scenes/splash_screen.tscn
+res://scenes/credits_screen.tscn
+res://scripts/splash_screen.gd

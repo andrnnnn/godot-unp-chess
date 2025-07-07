@@ -1,0 +1,108 @@
+[gd_scene load_steps=5 format=3 uid="uid://dlr41tg4ioly1"]
+
+[ext_resource type="Script" path="res://scripts/time_selection_popup.gd" id="1_8stab"]
+[ext_resource type="FontFile" uid="uid://binnamcsbaeja" path="res://assets/fonts/Abaddon_Bold.ttf" id="1_v4wjo"]
+[ext_resource type="FontFile" uid="uid://dqubc8i3xvgdr" path="res://assets/fonts/Abaddon_Light.ttf" id="2_psd2e"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ahd7"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+bg_color = Color(0.117647, 0.117647, 0.117647, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.5, 0.5, 0.5, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="TimeSelectionPopup" type="CanvasLayer"]
+process_mode = 3
+visible = false
+script = ExtResource("1_8stab")
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.6)
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = -240.0
+offset_right = 260.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8ahd7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_v4wjo")
+theme_override_font_sizes/font_size = 48
+text = "Pilih Mode Waktu"
+horizontal_alignment = 1
+
+[node name="ButtonContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="BulletButton" type="Button" parent="PanelContainer/VBoxContainer/ButtonContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_psd2e")
+theme_override_font_sizes/font_size = 32
+text = "1 | 0 Bullet"
+
+[node name="BlitzButton" type="Button" parent="PanelContainer/VBoxContainer/ButtonContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_psd2e")
+theme_override_font_sizes/font_size = 32
+text = "3 | 2 Blitz"
+
+[node name="RapidButton" type="Button" parent="PanelContainer/VBoxContainer/ButtonContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_psd2e")
+theme_override_font_sizes/font_size = 32
+text = "10 | 0 Rapid"
+
+[node name="ClassicalButton" type="Button" parent="PanelContainer/VBoxContainer/ButtonContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_psd2e")
+theme_override_font_sizes/font_size = 32
+text = "30 | 0 Classical"
+
+[node name="Separator" type="Control" parent="PanelContainer/VBoxContainer/ButtonContainer"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="NoTimeButton" type="Button" parent="PanelContainer/VBoxContainer/ButtonContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_psd2e")
+theme_override_font_sizes/font_size = 32
+text = "Tanpa Waktu"
+
+[node name="Separator2" type="Control" parent="PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_psd2e")
+theme_override_font_sizes/font_size = 32
+text = "Back"

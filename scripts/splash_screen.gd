@@ -2,13 +2,7 @@ extends Control
 
 ## Durasi transisi fade-in dan fade-out (dalam detik).
 @export var transition_duration: float = 0.75
-
-## Durasi logo ditampilkan setelah fade-in selesai (dalam detik).
 @export var hold_duration: float = 2.5 
-# Total durasi per logo = (2 * transition_duration) + hold_duration
-# Contoh: (2 * 0.75) + 2.5 = 1.5 + 2.5 = 4.0 detik. Sesuai permintaan.
-
-## Path ke scene menu utama Anda.
 @export var main_menu_scene: String = "res://scenes/main_menu.tscn"
 
 @onready var logo_unp: Control = $Screen1_Logos/LogoUNP

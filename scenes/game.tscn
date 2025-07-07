@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c8jr0502ype8o"]
+[gd_scene load_steps=12 format=3 uid="uid://c8jr0502ype8o"]
 
 [ext_resource type="Texture2D" uid="uid://bpeu3dqcoqvq0" path="res://assets/board.png" id="1_0208c"]
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_tclo3"]
@@ -8,7 +8,15 @@
 [ext_resource type="AudioStream" uid="uid://bqo0h4p4ut80l" path="res://assets/start_sound.mp3" id="6_86h3f"]
 [ext_resource type="FontFile" uid="uid://binnamcsbaeja" path="res://assets/fonts/Abaddon_Bold.ttf" id="6_ot55c"]
 [ext_resource type="PackedScene" uid="uid://dmogcj4nl7qlj" path="res://scenes/game_over_screen.tscn" id="7_4llqn"]
+[ext_resource type="AudioStream" uid="uid://c0j4w70gt8psb" path="res://assets/time_out.mp3" id="7_p4y2x"]
 [ext_resource type="PackedScene" uid="uid://drxujms5tlarp" path="res://scenes/pause_menu.tscn" id="8_71nvv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_abcde"]
+bg_color = Color(0, 0, 0, 0.4)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_tclo3")
@@ -35,17 +43,58 @@ stream = ExtResource("5_s1crc")
 [node name="StartSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_86h3f")
 
-[node name="CheckNotification" type="Label" parent="."]
+[node name="TimeOutSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_p4y2x")
+
+[node name="GameOverScreen" parent="." instance=ExtResource("7_4llqn")]
+
+[node name="PauseMenu" parent="." instance=ExtResource("8_71nvv")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BlackTimerDisplay" type="PanelContainer" parent="CanvasLayer"]
+offset_left = 840.0
+offset_top = 20.0
+offset_right = 1060.0
+offset_bottom = 90.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_abcde")
+
+[node name="BlackTimerLabel" type="Label" parent="CanvasLayer/BlackTimerDisplay"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_ot55c")
+theme_override_font_sizes/font_size = 48
+text = "10:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WhiteTimerDisplay" type="PanelContainer" parent="CanvasLayer"]
+offset_left = 840.0
+offset_top = 990.0
+offset_right = 1060.0
+offset_bottom = 1060.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_abcde")
+
+[node name="WhiteTimerLabel" type="Label" parent="CanvasLayer/WhiteTimerDisplay"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_ot55c")
+theme_override_font_sizes/font_size = 48
+text = "10:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CheckNotification" type="Label" parent="CanvasLayer"]
 visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 130.0
-offset_top = 478.0
-offset_right = 930.0
-offset_bottom = 678.0
+offset_left = -410.0
+offset_top = -102.0
+offset_right = 410.0
+offset_bottom = 98.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.2, 0.2, 0.2, 1)
@@ -55,6 +104,6 @@ text = "Check!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="GameOverScreen" parent="." instance=ExtResource("7_4llqn")]
+[node name="WhiteTimer" type="Timer" parent="."]
 
-[node name="PauseMenu" parent="." instance=ExtResource("8_71nvv")]
+[node name="BlackTimer" type="Timer" parent="."]
