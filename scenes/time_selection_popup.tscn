@@ -73,7 +73,7 @@ text = "1 | 0 Bullet"
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_psd2e")
 theme_override_font_sizes/font_size = 32
-text = "3 | 2 Blitz"
+text = "3 | 0 Blitz"
 
 [node name="RapidButton" type="Button" parent="PanelContainer/VBoxContainer/ButtonContainer"]
 layout_mode = 2
